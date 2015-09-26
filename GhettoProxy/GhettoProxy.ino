@@ -58,6 +58,9 @@ nop();
 #ifdef PROTOCOL_UBLOX
 #include "GPS_UBLOX.cpp"
 #endif
+#ifdef PROTOCOL_NAZATALK
+#include "NAZATalk.h"
+#endif
 
 //################################### SETTING OBJECTS ###############################################
 
@@ -170,6 +173,11 @@ void get_telemetry() {
 
 #if defined (PROTOCOL_NMEA) || defined (PROTOCOL_UBLOX)
  gps_read();
+#endif
+
+#ifdef PROTOCOL_NAZATALK
+#define DJI_HEADING_FROM_MAG
+    nazatalk_read();
 #endif
 }
 
