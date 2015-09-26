@@ -20,17 +20,27 @@
 //#define PROTOCOL_UAVTALK                      // OpenPilot / Taulabs protocol
 //#define PROTOCOL_MSP                          // MSP from Multiwii / Baseflight
 //#define PROTOCOL_MAVLINK                      // Mavlink for Ardupilot / Autoquad / PixHawk / Taulabs (UAVOmavlinkBridge)
-#define PROTOCOL_NMEA                           //GPS NMEA ASCII protocol
+//#define PROTOCOL_NMEA                           //GPS NMEA ASCII protocol
 //#define PROTOCOL_UBLOX                        //GPS UBLOX binary protocol
+#define PROTOCOL_NAZATALK
+#define GPS_PROTOCOL_DJI
 
 //!uncomment to use altitude from Baro. Use GPS alt if commented.
 //#define BARO_ALT
 
 //INPUT BAUDRATE
- #define INPUT_BAUD 57600
+// #define INPUT_BAUD 57600
+// DJI NAZA
+#ifdef GPS_PROTOCOL_DJI
+#define INPUT_BAUD  115200 // DJI NAZA GPS communication protocol
+#else
+#define INPUT_BAUD  57600  
+#endif
+ 
+ 
 
 // GhettoProxy just listen & convert in passive mode. If disabled, it will initiate queries packet.
- #define PASSIVEMODE 1
+#define PASSIVEMODE 1
 
 //OUTOPUT BAUDRATE
 #define OUTPUT_BAUD 2400
