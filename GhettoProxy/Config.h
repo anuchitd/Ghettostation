@@ -20,10 +20,10 @@
 //#define PROTOCOL_UAVTALK                      // OpenPilot / Taulabs protocol
 //#define PROTOCOL_MSP                          // MSP from Multiwii / Baseflight
 //#define PROTOCOL_MAVLINK                      // Mavlink for Ardupilot / Autoquad / PixHawk / Taulabs (UAVOmavlinkBridge)
-//#define PROTOCOL_NMEA                           //GPS NMEA ASCII protocol
-//#define PROTOCOL_UBLOX                        //GPS UBLOX binary protocol
-#define PROTOCOL_NAZATALK
-#define GPS_PROTOCOL_DJI
+//#define PROTOCOL_NMEA                         // GPS NMEA ASCII protocol
+//#define PROTOCOL_UBLOX                        // GPS UBLOX binary protocol
+#define PROTOCOL_NAZATALK                       // DJI NAZA
+#define GPS_PROTOCOL_DJI                        // DJI NAZA 
 
 //!uncomment to use altitude from Baro. Use GPS alt if commented.
 //#define BARO_ALT
